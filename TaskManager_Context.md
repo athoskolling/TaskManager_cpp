@@ -12,7 +12,7 @@ The learning goals are object-oriented programming, pointers, dynamic allocation
 
 ## Current milestone
 
-The first architecture and data-model decisions are complete. `TaskManager` owns task-management rules and unique-ID generation; `FileManager` owns text-file reading and writing. The project files and the assignment brief have been created. The learner has drafted `Task.h` with `Priority` and `Status` enum classes, private task fields, a constructor declaration, and getter declarations. The enum syntax is correct. The next step is to remove the unused input/output include and global namespace directive, use `std::string`, choose consistent enum-value capitalization, and then implement the constructor in `Task.cpp`.
+The first architecture and data-model decisions are complete. `TaskManager` owns task-management rules and unique-ID generation; `FileManager` owns text-file reading and writing. The project files and the assignment brief have been created. `Task.h` is complete with include protection, PascalCase enum values, private fields, a constructor declaration, const-correct getters, and a generic `UpdateStatus(Status newStatus)` method. The next step is to implement every declared `Task` method in `Task.cpp`.
 
 ## Required functionality
 
@@ -67,3 +67,5 @@ Separate these responsibilities:
 - Added an optional three-minute context-snapshot script in `scripts/start-context-autosave.ps1`, its usage README, and a Git ignore rule for snapshots.
 - Clarified that the teacher must never provide code that the learner is expected to write, even when directly asked. Guidance may use concepts, questions, pseudocode, non-project examples, or incomplete illustrations.
 - Covered the purpose and placement of enum classes, the distinction between private and protected data, getter declaration syntax, `std::` namespace qualification, and PascalCase naming.
+- Added `#pragma once`, made getters const-correct, and changed the title getter to return a const reference.
+- Completed the `Task.h` declaration, including the typed status-update parameter.

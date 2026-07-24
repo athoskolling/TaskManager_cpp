@@ -1,14 +1,15 @@
+#pragma once
 #include <string>
 
 enum class Priority{
-    low,
-    medium,
-    high
+    Low,
+    Medium,
+    High
 };
 
 enum class Status{
-    pending,
-    completed
+    Pending,
+    Completed
 };
 
 class Task { 
@@ -25,10 +26,12 @@ class Task {
         Task(int task_id, std::string title, Priority priority, Status status);
 
         //getters
-        const int GetId();
-        const std::string GetTitle();
-        const Priority GetPriority();
-        const Status GetStatus();
+        int GetId() const;
+        const std::string& GetTitle() const;
+        Priority GetPriority() const;
+        Status GetStatus() const;
+
+        void UpdateStatus(Status newStatus);
 
 };
 

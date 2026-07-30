@@ -78,6 +78,16 @@ Separate these responsibilities:
 - Next learning task: identify what a linked-list node must store and design `TaskList` without using a standard collection.
 - Checkpoint saved at the start of the linked-list milestone; no `TaskList` code has been written yet.
 
+## Session record: 2026-07-29
+
+- Synchronized the local `main` branch with `origin/main`; the local repository now matches the GitHub version at commit `a7d4115`.
+- Re-read the project context and confirmed that `Task` is complete while `TaskList.h` and `TaskList.cpp` still have no implementation.
+- Began the manual linked-list lesson. Established the responsibility split: `Task` stores only task data; `Node` stores a `Task` object plus a pointer to the next node; `TaskList` owns the `head` pointer.
+- Chose to store `Task` directly in each node rather than `Task*`, avoiding separate dynamic lifetime management for each task. Nodes themselves will still be dynamically allocated.
+- Confirmed that an empty list is represented by `head == nullptr`.
+- Explained that `head` (and an optional `tail`) are fields of `TaskList`, not fields of every `Node`. The first version will use `head` only.
+- Exact checkpoint: the learner must answer whether `Node` should be declared inside `TaskList` or as a separate structure visible to the whole project, and explain why. Do not write `TaskList` code before discussing that design choice.
+
 ## Last updated
 
-2026-07-24 — Task model completed; ready to design the manual linked list.
+2026-07-29 — linked-list design started; resume at the `Node` placement question.

@@ -12,7 +12,7 @@ The learning goals are object-oriented programming, pointers, dynamic allocation
 
 ## Current milestone
 
-The first architecture and data-model decisions are complete. `TaskManager` owns task-management rules and unique-ID generation; `FileManager` owns text-file reading and writing. The project files and the assignment brief have been created. `Task.h` is complete with include protection, PascalCase enum values, private fields, a constructor declaration, const-correct getters, and a generic `UpdateStatus(Status newStatus)` method. The next step is to implement every declared `Task` method in `Task.cpp`.
+The `Task` model is complete and compiles cleanly with strict warnings enabled. The next step is to design the `Node` structure and the basic `TaskList` interface for the manually implemented linked list.
 
 ## Required functionality
 
@@ -69,3 +69,15 @@ Separate these responsibilities:
 - Covered the purpose and placement of enum classes, the distinction between private and protected data, getter declaration syntax, `std::` namespace qualification, and PascalCase naming.
 - Added `#pragma once`, made getters const-correct, and changed the title getter to return a const reference.
 - Completed the `Task.h` declaration, including the typed status-update parameter.
+
+## Session record: 2026-07-24
+
+- Implemented every declared `Task` method in `Task.cpp`: constructor, four getters, and `UpdateStatus`.
+- Verified `Task.cpp` using `g++ -std=c++17 -Wall -Wextra -pedantic`; compilation completed with no errors or warnings.
+- Reinforced the distinction between a field stored in an object and a constructor parameter that exists only during construction, plus the purpose of `Task::` in source-file method definitions.
+- Next learning task: identify what a linked-list node must store and design `TaskList` without using a standard collection.
+- Checkpoint saved at the start of the linked-list milestone; no `TaskList` code has been written yet.
+
+## Last updated
+
+2026-07-24 — Task model completed; ready to design the manual linked list.

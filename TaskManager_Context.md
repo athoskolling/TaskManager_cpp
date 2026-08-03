@@ -88,6 +88,15 @@ Separate these responsibilities:
 - Explained that `head` (and an optional `tail`) are fields of `TaskList`, not fields of every `Node`. The first version will use `head` only.
 - Exact checkpoint: the learner must answer whether `Node` should be declared inside `TaskList` or as a separate structure visible to the whole project, and explain why. Do not write `TaskList` code before discussing that design choice.
 
+## Session record: 2026-08-03
+
+- Learner decided that `Node` should be private inside `TaskList`, after discussing encapsulation: only `TaskList` should expose or manipulate nodes and `next` pointers.
+- Confirmed the node data: one `Task` object and a pointer to the next node; its `next` pointer begins as `nullptr`.
+- Clarified that a declaration such as `Car* firstCar` creates a pointer variable, not a `Car` object. A constructor initializes that pointer to `nullptr` for an empty list.
+- Explained that one menu action creates one task. Input flows from `main` to `TaskManager` (validation, unique ID, task creation), then to `TaskList` (node creation and linking).
+- Explained the append algorithm: create a node for one received task; make it `head` if the list is empty, otherwise traverse from `head` to the last node and connect its `next` pointer to the new node.
+- Next concrete step: learner writes `TaskList.h` with a private nested `Node`, a private `head` pointer, a constructor, and the declaration of an add method that accepts one `Task`; then submit it for review. Do not implement user input or `TaskManager` yet.
+
 ## Last updated
 
 2026-07-29 — linked-list design started; resume at the `Node` placement question.

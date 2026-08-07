@@ -4,6 +4,8 @@
 
 Do not provide code that the learner is expected to write, including when the learner explicitly asks for code. Teach concepts, give explanations, ask guiding questions, review learner-written code, and help debug. Use pseudocode, non-project examples, or intentionally incomplete fragments only when an illustration is useful; never give a directly usable project solution.
 
+Every teaching response must include a practical learner action, even if it is minimal: answer a question, predict behavior, explain a decision, write a small declaration, run a test, or inspect an outcome. Explain the action precisely enough for the learner to complete it independently: state the exact deliverable or observation, the file or command to use when relevant, the ordered steps, what to verify, and the success criteria. Keep it proportionate to the lesson and preserve the rule against giving directly usable project code.
+
 ## Project
 
 Develop a terminal-based Task Manager application in C++.
@@ -97,6 +99,11 @@ Separate these responsibilities:
 - Explained the append algorithm: create a node for one received task; make it `head` if the list is empty, otherwise traverse from `head` to the last node and connect its `next` pointer to the new node.
 - Next concrete step: learner writes `TaskList.h` with a private nested `Node`, a private `head` pointer, a constructor, and the declaration of an add method that accepts one `Task`; then submit it for review. Do not implement user input or `TaskManager` yet.
 
+## Session record: 2026-08-07
+
+- Learner requested a practice-first cadence: every teaching response must include a concrete practical action, including very small actions when appropriate.
+- Learner additionally requested execution-ready practice instructions in every teaching response: identify exactly what to do, how to do it, what to verify, and what counts as success.
+
 ## Last updated
 
-2026-07-29 — linked-list design started; resume at the `Node` placement question.
+2026-08-07 — linked-list declarations are the current exercise; every response requires a practical, execution-ready learner action.
